@@ -1,0 +1,105 @@
+<html>
+  <meta charset="UTF-8" /><meta content="width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=5" name="viewport" /><meta content="IE=edge" http-equiv="X-UA-Compatible" /><link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
+  <link href="https://lv3000.likeadream.repl.co/style.css" rel="stylesheet" type="text/css" />
+  <script src="https://lv3000.likeadream.repl.co/script.js"></script>
+  <head>
+    <title>Coba Buka</title>
+    <!-- 
+This code was made by:
+https://linktr.ee/rayyarr
+Instagram: @rayyarrr
+TikTok: @rayyarr_
+Telegram: @rayyarr
+-->
+  </head>
+  <body>
+    <audio controls="false" autoplay="true">
+      <source src="Musik.mp3" type="audio/mp3" />
+    </audio>
+    <!-- Wallpaper -->
+    <style>
+      body {
+        background-image: url("https://i.pinimg.com/originals/d2/ae/06/d2ae06f308fdc4a47699246dbde7f411.jpg");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        animation: none;
+        transition: all 0.3s ease;
+      }
+    </style>
+    <div id="konten">
+      <div id="foto">
+        <a href="https://postimg.cc/w3Rhf52H" target="_blank"><img src="https://i.postimg.cc/w3Rhf52H/5a1bb8363776b4-4092662715117660702272.png" border="0" alt="5a1bb8363776b4-4092662715117660702272" /></a>
+        <span id="sp2"></span>
+      </div>
+
+      <div id="slider">
+        <p>Musikna play hela</p>
+        <p>Halo&nbsp;<b id="kamu"></b>&nbsp;</p>
+        <p>ulang tahunnya??</p>
+        <p>Nyanggeus</p>
+        <p>Selamat Ulang Tahun heeh 🙂🙂</p>
+        <p>Semoga ka harepna jadi lebih baik deui</p>
+        <p>Trus Sehat selalu</p>
+        <p>Semoga panjang umur</p>
+        <p>Beres sih, naon deui nya</p>
+        <p>oh heeh</p>
+        <p>Sehat-sehat heeh 🙃🙃🙃</p>
+        <p>Trus jaga kesehatan weh🤗🤗🤗</p>
+        <p>Pencet emote na gera <label class="lovein" onClick="duar()">🤗</label></p>
+      </div>
+    </div>
+    <div id="bodyblur"></div>
+
+    <script>
+      //Teks terakhir
+      var a = 0,
+        finish;
+      finish = "SELAMAT ULANG TAHUN";
+
+      function play() {
+        //Link Audio Bisa Diganti
+        var audio = new Audio("");
+        audio.play();
+      }
+    </script>
+
+    <script type="text/javascript">
+      var today = new Date();
+      var date = today.getDate() + "/" + (today.getMonth() + 1) + "/" + today.getFullYear() + ".";
+      var dateTime = date;
+      const swals = Swal.mixin({
+        allowOutsideClick: false,
+      });
+      async function mulai() {
+        var { value: nama } = await swals.fire({
+          title: "Namanya Siapa ??",
+          input: "text",
+          confirmButtonText: "Lanjut",
+          showCancelButton: false,
+        });
+        {
+          if (nama) {
+            window.nama = nama;
+            finish = finish + ", " + nama + "!";
+            document.getElementById("kamu").innerHTML = "" + window.nama;
+          } else {
+            await swals.fire("Nama tidak boleh kosong, ya!");
+            mulai();
+          }
+        }
+
+        var { value: nama } = await swals.fire({
+          title: "Katanya Hari ini ulang tahun ???",
+          confirmButtonText: "benar",
+        });
+        setTimeout(showDiv, 700);
+        play();
+      }
+      mulai();
+    </script>
+  </body>
+</html>
